@@ -32,6 +32,6 @@ Podemos instalarlo descargando los archivos desde github si deseamos modificar e
 
 * Si de descarga de github, debemos ejecutar el archivo 'testSRGrads.py'
 * En caso se instale con pip3, se necesita usarlo con los siguientes comandos:
-*   from pysrgrads.pysrgrads import SRGrads
-*   root = SRGrads()
-*   root.show()
+  * from pysrgrads.pysrgrads import SRGrads
+  * root = SRGrads()
+  * root.show()
