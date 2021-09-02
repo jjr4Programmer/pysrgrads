@@ -2,7 +2,7 @@
 
 SRGrads fue creado con el objetivo de poder interactuar de una manera más sencilla con los archivos CTL y el sistema de análisis y visualización de cuadrícula GrADS, de modo que el usuario se enfoque más en la visualización correcta de los datos, sin preocuparse del código .gs, esto permitirá que el usuario utilice de manera más fluída el software sin necesidad de utilizar el terminal.
 
-![image](test.png)
+![image](testSRGrads.png)
 
 SRGrads brinda a los usuarios las siguientes funcionalidades:
 <ul>
