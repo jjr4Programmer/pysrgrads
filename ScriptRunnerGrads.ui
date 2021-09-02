@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1123</width>
+    <height>750</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Script Runner Grads</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(211, 215, 207);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QCommandLinkButton" name="btnGenGraph">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>620</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Make graphic</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="listVars">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>300</y>
+      <width>131</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::SingleSelection</enum>
+    </property>
+    <property name="selectionBehavior">
+     <enum>QAbstractItemView::SelectItems</enum>
+    </property>
+    <property name="selectionRectVisible">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblTitle">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>1001</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Title:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblTitle_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>270</y>
+      <width>91</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Variables:</string>
+    </property>
+   </widget>
+   <widget class="QTreeWidget" name="treeDesc">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>51</y>
+      <width>311</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <attribute name="headerMinimumSectionSize">
+     <number>70</number>
+    </attribute>
+    <attribute name="headerDefaultSectionSize">
+     <number>120</number>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>Property</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Value</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>270</y>
+      <width>51</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Gxout:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cmbGxout">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>264</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(114, 159, 207);
+selection-background-color: rgb(136, 138, 133);</string>
+    </property>
+    <property name="currentIndex">
+     <number>-1</number>
+    </property>
+    <item>
+     <property name="text">
+      <string>bar</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>barb</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>contour</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>errbar</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>geotiff</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>grfill</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>grid</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>line</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>linefill</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>scatter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>shaded</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>shade1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>shade2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>shade2b</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>stream</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>stat</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>vector</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>40</y>
+      <width>771</width>
+      <height>631</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(52, 101, 164);</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Graphic</string>
+     </attribute>
+     <widget class="QLabel" name="lblGraphic">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>750</width>
+        <height>580</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 2px solid blue;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
+     </widget>
+     <widget class="QCommandLinkButton" name="btnSaveGraphic">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>530</y>
+        <width>48</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../salvar.png</normaloff>../../salvar.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>35</width>
+        <height>35</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Script Runner</string>
+     </attribute>
+     <widget class="QPlainTextEdit" name="txtScript">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>751</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(85, 87, 83);
+color: rgb(255, 255, 255);
+font: 15pt &quot;Ubuntu Mono&quot;;
+border: 2px solid blue;</string>
+      </property>
+      <property name="plainText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QCommandLinkButton" name="btnRunScript">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>550</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Run script</string>
+      </property>
+     </widget>
+     <widget class="QCommandLinkButton" name="btnSaveScript">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>706</x>
+        <y>540</y>
+        <width>51</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../salvar.png</normaloff>../../salvar.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>35</width>
+        <height>35</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QCheckBox" name="checkSameG">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>520</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Same graphic</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>310</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>Longitude minimum</string>
+    </property>
+    <property name="text">
+     <string>Min. Long.:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>340</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>Longitude maximum</string>
+    </property>
+    <property name="text">
+     <string>Max. Long.:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>380</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>Latitude minimum</string>
+    </property>
+    <property name="text">
+     <string>Min. Lati.:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>410</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>Latitude maximum</string>
+    </property>
+    <property name="text">
+     <string>Max. Lati.:</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="minLon">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>310</y>
+      <width>81</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="minimum">
+     <number>-180</number>
+    </property>
+    <property name="maximum">
+     <number>180</number>
+    </property>
+    <property name="value">
+     <number>-180</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="maxLon">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>340</y>
+      <width>81</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="minimum">
+     <number>-180</number>
+    </property>
+    <property name="maximum">
+     <number>180</number>
+    </property>
+    <property name="value">
+     <number>180</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="minLat">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>380</y>
+      <width>81</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="minimum">
+     <number>-90</number>
+    </property>
+    <property name="maximum">
+     <number>90</number>
+    </property>
+    <property name="value">
+     <number>-90</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="maxLat">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>410</y>
+      <width>81</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="minimum">
+     <number>-90</number>
+    </property>
+    <property name="maximum">
+     <number>90</number>
+    </property>
+    <property name="value">
+     <number>90</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>482</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>Latitude maximum</string>
+    </property>
+    <property name="text">
+     <string>Max. Time:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>450</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>Latitude minimum</string>
+    </property>
+    <property name="text">
+     <string>Min. Time:</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="minTime">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>450</y>
+      <width>81</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="maxTime">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>480</y>
+      <width>81</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>520</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Value Lev.:</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinLev">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>520</y>
+      <width>81</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>680</y>
+      <width>381</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Creado por Julio Raime Perez - Meteorologia - UNMSM</string>
+    </property>
+   </widget>
+   <zorder>tabWidget</zorder>
+   <zorder>btnGenGraph</zorder>
+   <zorder>listVars</zorder>
+   <zorder>lblTitle</zorder>
+   <zorder>lblTitle_2</zorder>
+   <zorder>treeDesc</zorder>
+   <zorder>label</zorder>
+   <zorder>cmbGxout</zorder>
+   <zorder>checkSameG</zorder>
+   <zorder>label_2</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_4</zorder>
+   <zorder>label_5</zorder>
+   <zorder>minLon</zorder>
+   <zorder>maxLon</zorder>
+   <zorder>minLat</zorder>
+   <zorder>maxLat</zorder>
+   <zorder>label_6</zorder>
+   <zorder>label_7</zorder>
+   <zorder>minTime</zorder>
+   <zorder>maxTime</zorder>
+   <zorder>label_8</zorder>
+   <zorder>spinLev</zorder>
+   <zorder>label_9</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1123</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(136, 138, 133);
+selection-background-color: rgb(114, 159, 207);</string>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpenFile"/>
+    <addaction name="actionOpenScript"/>
+    <addaction name="actionOpen_recents"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(211, 215, 207);</string>
+   </property>
+  </widget>
+  <action name="actionOpenFile">
+   <property name="text">
+    <string>Open ctl/grb file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionSave_Graphic">
+   <property name="text">
+    <string>Save Graphic</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+G</string>
+   </property>
+  </action>
+  <action name="actionSave_script">
+   <property name="text">
+    <string>Save Script</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionOpen_recents">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Open recents</string>
+   </property>
+  </action>
+  <action name="actionOpenScript">
+   <property name="text">
+    <string>Open script gs</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
