@@ -1,7 +1,9 @@
 # pysrgrads
 
 SRGrads fue creado con el objetivo de poder interactuar de una manera más sencilla con los archivos CTL y el sistema de análisis y visualización de cuadrícula GrADS, de modo que el usuario se enfoque más en la visualización correcta de los datos, sin preocuparse del código .gs, esto permitirá que el usuario utilice de manera más fluída el software sin necesidad de utilizar el terminal.
+
 ![image](testSRGrads.png)
+
 SRGrads brinda a los usuarios las siguientes funcionalidades:
 <ul>
   <li>Leer archivos CTLs: Al abrir un archivo CTL vamos a poder visualizar en el programa las diferentes propiedades del archivo.</li> 
@@ -30,7 +32,7 @@ Para poder utilizar SRGrads debemos tener en cuenta lo siguiente:
 ### Instalación
 Podemos instalarlo descargando los archivos desde github si deseamos modificar el diseño con QTDesigner, sin embargo, también podemos hacerlo usando pip3 con el comando "pip3 install pysrgrads".
 
-* Si de descarga de github, debemos ejecutar el archivo 'testSRGrads.py'
+* Si se descarga de github, debemos ejecutar el archivo 'testSRGrads.py'
 * En caso se instale con pip3, se necesita usarlo con los siguientes comandos:
   * from pysrgrads.pysrgrads import SRGrads
   * root = SRGrads()
