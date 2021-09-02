@@ -15,9 +15,9 @@ SRGrads brinda a los usuarios las siguientes funcionalidades:
 ### Pre requisitos
 Para poder utilizar SRGrads debemos tener en cuenta lo siguiente:
 <ol>
-  <li>GRADS: Debemos tener instalado GRADS en la ruta $HOME</li>
+  <li>GRADS: Debemos tener instalado GRADS en la ruta $HOME, puede descargarlo <a href="http://cola.gmu.edu/grads/downloads.php">aqui</a></li>
   <li>grib2ctl: Debemos descargar el archivo grib2ctl.pl y guardarlo en la ruta $HOME/GRADS/opengrads/Contents</li>
-  <li>gribmap: Debemos tener el archivo gribmap en la ruta $HOME/GRADS/opengrads/Contents</li>
+  <li>wgrib: Debemos instalar wgrib en nuestro sistema</li>
   <li>
     Python: SRGrads se creó utilizando la versión 3.8.10, sin embargo, debe estar disponible utilizando cualquier versión de Python: 3.5+, además:
     <ol>
